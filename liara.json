@@ -1,8 +1,13 @@
 {
-"app":"personal-expense-tracker"
-"port":80
-"build":{
-"location":"iran"
-}
-"disks":[]
+  "app": "personal-expense-tracker",
+  "port": 8501,
+  "platform": "python",
+  "build": {
+    "location": "iran"
+  },
+  "disks": [],
+  "scripts": {
+    "build": "pip install -r requirements.txt",
+    "start": "streamlit run src/app.py --server.port=8501 --server.address=0.0.0.0"
+  }
 }
